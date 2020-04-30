@@ -43,7 +43,7 @@ class UrlController extends Controller
     {
         $data = [
             'url' => $request->get('url'),
-            'code' => $request->get('code') ? \Str::slug($request->get('code')) : \Hasher::generate(),
+            'code' => $request->get('code') ? Str::slug($request->get('code')) : \Hasher::generate(),
             'user_id' => optional(auth()->user())->id,
         ];
 

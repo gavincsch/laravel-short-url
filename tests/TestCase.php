@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use Gallib\ShortUrl\Parsers\UrlParser;
+use Glowtech\ShortUrl\Parsers\UrlParser;
 use Illuminate\Database\Schema\Blueprint;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
@@ -65,7 +65,7 @@ abstract class TestCase extends OrchestraTestCase
     protected function getPackageProviders($app)
     {
         return [
-            'Gallib\ShortUrl\ShortUrlServiceProvider',
+            'Glowtech\ShortUrl\ShortUrlServiceProvider',
         ];
     }
 
@@ -82,8 +82,8 @@ abstract class TestCase extends OrchestraTestCase
     protected function getPackageAliases($app)
     {
         return [
-            'Hasher' => 'Gallib\ShortUrl\Facades\Hasher',
-            'ShortUrl' => 'Gallib\ShortUrl\Facades\ShortUrl',
+            'Hasher' => 'Glowtech\ShortUrl\Facades\Hasher',
+            'ShortUrl' => 'Glowtech\ShortUrl\Facades\ShortUrl',
         ];
     }
 
@@ -103,7 +103,7 @@ abstract class TestCase extends OrchestraTestCase
             ->shouldReceive('getBody')
             ->andReturn($this->getUrlBody());
 
-        $this->app->instance('Gallib\ShortUrl\Parsers\UrlParser', $mock);
+        $this->app->instance('Glowtech\ShortUrl\Parsers\UrlParser', $mock);
     }
 
     /**

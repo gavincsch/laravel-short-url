@@ -23,7 +23,7 @@ class UpdateUrlTest extends TestCase
     /** @test */
     public function an_url_can_be_updated()
     {
-        $url = array_merge($this->createUrl(), ['url' => 'https://github.com/gallib/laravel-short-url']);
+        $url = array_merge($this->createUrl(), ['url' => 'https://github.com/glowtech/laravel-short-url']);
 
         $response = $this->putJson(route('shorturl.url.update', ['id' => $url['id']]), $url)->json();
 

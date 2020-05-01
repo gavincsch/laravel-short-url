@@ -1,9 +1,3 @@
-<p align="center">
-    <img width="80%" src="https://raw.githubusercontent.com/gallib/laravel-short-url/master/assets/images/logo.png" alt="Laravel Short URL logo" />
-</p>
-
-# Laravel Short Url [![Build Status](https://travis-ci.org/gallib/laravel-short-url.svg?branch=master)](https://travis-ci.org/gallib/laravel-short-url) [![StyleCI](https://styleci.io/repos/122629531/shield?branch=master)](https://styleci.io/repos/122629531)
-
 Laravel Short Url is a package allowing you to shorten urls.
 
 ## Installation
@@ -11,13 +5,13 @@ Laravel Short Url is a package allowing you to shorten urls.
 With composer
 
 ```
-composer require gallib/laravel-short-url
+composer require glowtech/laravel-short-url
 ```
 
 then run
 
 ```
-php artisan vendor:publish --provider="Gallib\ShortUrl\ShortUrlServiceProvider"
+php artisan vendor:publish --provider="Glowtech\ShortUrl\ShortUrlServiceProvider"
 php artisan migrate
 ```
 
@@ -43,5 +37,4 @@ this allows you to add middlewares or prefix routes.
 Laravel short url is now set up on your homepage.
 
 ## Credits
-- Created by [Alain](https://twitter.com/gallib_net)
-- Logo by [Caneco](https://twitter.com/caneco)
+- Forked from: Created by [Alain](https://twitter.com/gallib_net)

@@ -1,8 +1,8 @@
 <?php
 
-namespace Gallib\ShortUrl\Http\Requests;
+namespace Glowtech\ShortUrl\Http\Requests;
 
-use Gallib\ShortUrl\Rules\Blacklist;
+use Glowtech\ShortUrl\Rules\Blacklist;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UrlRequest extends FormRequest

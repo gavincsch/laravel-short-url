@@ -1,6 +1,6 @@
 <?php
 
-namespace Gallib\ShortUrl;
+namespace Glowtech\ShortUrl;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;

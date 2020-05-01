@@ -1,5 +1,5 @@
 {
-    "name": "gallib/laravel-short-url",
+    "name": "glowtech/laravel-short-url",
     "description": "A Laravel package to shorten urls",
     "keywords": ["laravel", "package", "url", "shortener"],
     "license": "MIT",
@@ -7,6 +7,10 @@
         {
             "name": "Alain Pellaux",
             "email": "alain@gallib.net"
+        },
+        {
+            "name": "Gavin Schreiber",
+            "email": "schreiber.glowtech@gmail.com"
         }
     ],
     "require": {
@@ -27,7 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Gallib\\ShortUrl\\": "src/"
+            "Glowtech\\ShortUrl\\": "src/"
         }
     },
     "autoload-dev": {
@@ -38,11 +42,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Gallib\\ShortUrl\\ShortUrlServiceProvider"
+                "Glowtech\\ShortUrl\\ShortUrlServiceProvider"
             ],
             "aliases": {
-                "Hasher": "Gallib\\ShortUrl\\Facades\\Hasher",
-                "ShortUrl": "Gallib\\ShortUrl\\Facades\\ShortUrl"
+                "Hasher": "Glowtech\\ShortUrl\\Facades\\Hasher",
+                "ShortUrl": "Glowtech\\ShortUrl\\Facades\\ShortUrl"
             }
         }
     },

@@ -1,11 +1,11 @@
 <?php
 
-namespace Gallib\ShortUrl\Http\Controllers;
+namespace Glowtech\ShortUrl\Http\Controllers;
 
 use Carbon\Carbon;
-use Gallib\ShortUrl\Http\Requests\UrlRequest;
-use Gallib\ShortUrl\Http\Responses\UrlResponse;
-use Gallib\ShortUrl\Url;
+use Glowtech\ShortUrl\Http\Requests\UrlRequest;
+use Glowtech\ShortUrl\Http\Responses\UrlResponse;
+use Glowtech\ShortUrl\Url;
 use Illuminate\Routing\Controller;
 
 class UrlController extends Controller
@@ -35,7 +35,7 @@ class UrlController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Gallib\ShortUrl\Http\Requests\UrlRequest $request
+     * @param \Glowtech\ShortUrl\Http\Requests\UrlRequest $request
      *
      * @return \Illuminate\Http\Response
      */
@@ -72,7 +72,7 @@ class UrlController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Gallib\ShortUrl\Http\Requests\UrlRequest  $request
+     * @param  \Glowtech\ShortUrl\Http\Requests\UrlRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

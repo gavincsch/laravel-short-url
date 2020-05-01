@@ -60,7 +60,7 @@ class RedirectTest extends TestCase
     {
         $url = $this->createUrl(['code' => 'abcde']);
 
-        $url['url'] = 'https://github.com/gallib/laravel-short-url';
+        $url['url'] = 'https://github.com/glowtech/laravel-short-url';
         $url['code'] = 'fghij';
 
         $this->put(route('shorturl.url.update', ['id' => $url['id']]), $url);
@@ -77,7 +77,7 @@ class RedirectTest extends TestCase
 
         $this->get(route('shorturl.redirect', ['code' => $url['code']]));
 
-        $url['url'] = 'https://github.com/gallib/laravel-short-url';
+        $url['url'] = 'https://github.com/glowtech/laravel-short-url';
 
         $this->put(route('shorturl.url.update', ['id' => $url['id']]), $url);
 
@@ -95,7 +95,7 @@ class RedirectTest extends TestCase
         $this->get(route('shorturl.redirect', ['code' => $url['code']]));
         $this->get(route('shorturl.redirect', ['code' => $url['code']]));
 
-        $url = \Gallib\ShortUrl\Url::whereId($url['id'])->first();
+        $url = \Glowtech\ShortUrl\Url::whereId($url['id'])->first();
 
         $this->assertEquals($url->counter, 3);
     }

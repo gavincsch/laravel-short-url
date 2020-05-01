@@ -3,7 +3,6 @@
 @section('shorturl.content')
     <div class="col-8 offset-2">
         <h1 class="text-center mb-5">
-            <img class="logo-title" src="{{ asset('/gallib/shorturl/images/short.png') }}" alt="Laravel Short Url">
             Laravel Short Url
         </h1>
         @if (session('short_url'))

@@ -1,8 +1,8 @@
 <?php
 
-namespace Gallib\ShortUrl\Parsers;
+namespace Glowtech\ShortUrl\Parsers;
 
-use Gallib\ShortUrl\Url;
+use Glowtech\ShortUrl\Url;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Symfony\Component\DomCrawler\Crawler;
@@ -51,7 +51,7 @@ class UrlParser
     /**
      * Parse the url to collect additionnal informations.
      *
-     * @param  \Gallib\ShortUrl\Url $url
+     * @param  \Glowtech\ShortUrl\Url $url
      * @return void
      */
     public function setUrlInfos(Url $url)

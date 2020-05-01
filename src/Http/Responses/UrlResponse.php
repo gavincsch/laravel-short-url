@@ -1,20 +1,20 @@
 <?php
 
-namespace Gallib\ShortUrl\Http\Responses;
+namespace Glowtech\ShortUrl\Http\Responses;
 
 use Illuminate\Contracts\Support\Responsable;
 
 class UrlResponse implements Responsable
 {
     /**
-     * @var \Gallib\ShortUrl\Url
+     * @var \Glowtech\ShortUrl\Url
      */
     protected $url;
 
     /**
      * Create a new instance.
      *
-     * @param \Gallib\ShortUrl\Url $url
+     * @param \Glowtech\ShortUrl\Url $url
      *
      * @return void
      */

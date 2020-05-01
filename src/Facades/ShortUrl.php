@@ -1,6 +1,6 @@
 <?php
 
-namespace Gallib\ShortUrl\Facades;
+namespace Glowtech\ShortUrl\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

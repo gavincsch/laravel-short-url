@@ -1,6 +1,6 @@
 <?php
 
-namespace Gallib\ShortUrl;
+namespace Glowtech\ShortUrl;
 
 class ShortUrl
 {
@@ -11,8 +11,8 @@ class ShortUrl
      */
     public function createRoutes()
     {
-        \Route::get('/', '\Gallib\ShortUrl\Http\Controllers\UrlController@create')->name('shorturl.url.create');
-        \Route::post('/', '\Gallib\ShortUrl\Http\Controllers\UrlController@store')->name('shorturl.url.store');
+        \Route::get('/', '\Glowtech\ShortUrl\Http\Controllers\UrlController@create')->name('shorturl.url.create');
+        \Route::post('/', '\Glowtech\ShortUrl\Http\Controllers\UrlController@store')->name('shorturl.url.store');
     }
 
     /**
@@ -22,10 +22,10 @@ class ShortUrl
      */
     public function manageRoutes()
     {
-        \Route::get('/{id}/edit', '\Gallib\ShortUrl\Http\Controllers\UrlController@edit')->name('shorturl.url.edit');
-        \Route::put('/{id}', '\Gallib\ShortUrl\Http\Controllers\UrlController@update')->name('shorturl.url.update');
-        \Route::delete('/{id}', '\Gallib\ShortUrl\Http\Controllers\UrlController@destroy')->name('shorturl.url.destroy');
-        \Route::get('/list', '\Gallib\ShortUrl\Http\Controllers\UrlController@index')->name('shorturl.url.index');
+        \Route::get('/{id}/edit', '\Glowtech\ShortUrl\Http\Controllers\UrlController@edit')->name('shorturl.url.edit');
+        \Route::put('/{id}', '\Glowtech\ShortUrl\Http\Controllers\UrlController@update')->name('shorturl.url.update');
+        \Route::delete('/{id}', '\Glowtech\ShortUrl\Http\Controllers\UrlController@destroy')->name('shorturl.url.destroy');
+        \Route::get('/list', '\Glowtech\ShortUrl\Http\Controllers\UrlController@index')->name('shorturl.url.index');
     }
 
     /**
@@ -35,7 +35,7 @@ class ShortUrl
      */
     public function redirectRoute()
     {
-        \Route::get('/{code}', '\Gallib\ShortUrl\Http\Controllers\RedirectController@redirect')->name('shorturl.redirect');
+        \Route::get('/{code}', '\Glowtech\ShortUrl\Http\Controllers\RedirectController@redirect')->name('shorturl.redirect');
     }
 
     /**

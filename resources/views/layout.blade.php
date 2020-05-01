@@ -7,9 +7,6 @@
 
         <title>{{ config('app.name') }} - Url shortener</title>
 
-        <!-- Styles -->
-        <link href="/css/app.css" rel="stylesheet">
-
         <style>
             html, body {
                 height: 100vh;

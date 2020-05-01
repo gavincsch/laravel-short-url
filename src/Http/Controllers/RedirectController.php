@@ -1,8 +1,8 @@
 <?php
 
-namespace Gallib\ShortUrl\Http\Controllers;
+namespace Glowtech\ShortUrl\Http\Controllers;
 
-use Gallib\ShortUrl\Url;
+use Glowtech\ShortUrl\Url;
 use Illuminate\Routing\Controller;
 
 class RedirectController extends Controller

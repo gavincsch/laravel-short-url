@@ -1,8 +1,8 @@
 <?php
 
-namespace Gallib\ShortUrl;
+namespace Glowtech\ShortUrl;
 
-use Gallib\ShortUrl\Parsers\UrlParser;
+use Glowtech\ShortUrl\Parsers\UrlParser;
 use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
 
@@ -27,10 +27,6 @@ class ShortUrlServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../resources/views' => base_path('resources/views/vendor/shorturl'),
             ], 'shorturl-views');
-
-            $this->publishes([
-                __DIR__.'/../assets' => public_path('gallib/shorturl'),
-            ], 'shorturl-assets');
         }
     }
 

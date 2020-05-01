@@ -1,6 +1,6 @@
 <?php
 
-namespace Gallib\ShortUrl\Rules;
+namespace Glowtech\ShortUrl\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 

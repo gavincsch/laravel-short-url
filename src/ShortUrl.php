@@ -49,4 +49,12 @@ class ShortUrl
         $this->manageRoutes();
         $this->redirectRoute();
     }
+
+    public static function buildLink($host, Url $url)
+    {
+        $prefix = config('shorturl.url_prefix');
+        $host = rtrim($host,'/');
+
+        return "$host/$prefix/{$url->code}";
+    }
 }

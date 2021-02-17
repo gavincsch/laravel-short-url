@@ -8,6 +8,9 @@ return [
 
     'url_prefix' => env('SHORT_URL_PATH', 'short-url'),
 
+    'enable_custom_expired_handle' => false,
+    'expired_redirect'  => null,
+
     /*
      | A list of non allowed keywords in url.
      */

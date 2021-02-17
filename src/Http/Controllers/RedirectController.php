@@ -20,16 +20,19 @@ class RedirectController extends Controller
             return Url::whereCode($code)->first();
         });
 
-        if ($url !== null) {
-            if ($url->hasExpired()) {
+        if ($url === null) {
+            abort(404);
+        }
+        if ($url->hasExpired()) {
+            if(config('shorturl.enable_custom_expired_handle') === true) {
+                return redirect()->away(config('shorturl.expired_redirect'), 301);
+            } else {
                 abort(410);
             }
-
-            $url->increment('counter');
-
-            return redirect()->away($url->url, $url->couldExpire() ? 302 : 301);
         }
 
-        abort(404);
+        $url->increment('counter');
+
+        return redirect()->away($url->url, $url->couldExpire() ? 302 : 301);
     }
 }

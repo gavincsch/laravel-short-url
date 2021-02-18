@@ -39,6 +39,14 @@ class ShortUrl
     }
 
     /**
+     * Register the expired link route
+     */
+    public function redirectExpired()
+    {
+        \Route::get('/{code}', '\Glowtech\ShortUrl\Http\Controllers\RedirectController@expired')->name('shorturl.expired');
+    }
+
+    /**
      * Register the routes.
      *
      * @return void
@@ -48,6 +56,7 @@ class ShortUrl
         $this->createRoutes();
         $this->manageRoutes();
         $this->redirectRoute();
+        $this->redirectExpired();
     }
 
     public static function buildLink($host, Url $url)

@@ -23,6 +23,7 @@ class Url extends Model
         'url',
         'code',
         'expires_at',
+        'expired_message',
         'user_id',
     ];
 

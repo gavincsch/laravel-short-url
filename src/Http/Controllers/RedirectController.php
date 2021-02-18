@@ -25,7 +25,8 @@ class RedirectController extends Controller
         }
         if ($url->hasExpired()) {
             if(config('shorturl.enable_custom_expired_handle') === true) {
-                return redirect()->away(config('shorturl.expired_redirect'), 301);
+                $link = "/".config('shorturl.url_prefix') . config('shorturl.expired_redirect') ."/$code";
+                return redirect()->away($link, 301);
             } else {
                 abort(410);
             }
@@ -34,5 +35,24 @@ class RedirectController extends Controller
         $url->increment('counter');
 
         return redirect()->away($url->url, $url->couldExpire() ? 302 : 301);
+    }
+
+    /**
+     * Redirect to expired url with code.
+     * @param $code
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function expired($code)
+    {
+        $url = \Cache::rememberForever("url.$code", function () use ($code) {
+            return Url::whereCode($code)->first();
+        });
+
+        if ($url === null) {
+            abort(404);
+        }
+
+        return view('shorturl::urls.expired', compact('url'));
     }
 }
